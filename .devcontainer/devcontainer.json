@@ -1,0 +1,27 @@
+{
+    "name": "Kaggle Dev CPU",
+    "image": "gcr.io/kaggle-images/python",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-toolsai.jupyter-keymap",
+                "tamasfe.even-better-toml",
+                "mhutchie.git-graph",
+                "ms-python.isort",
+                "ms-toolsai.jupyter",
+                "ms-toolsai.vscode-jupyter-cell-tags",
+                "ms-toolsai.jupyter-renderers",
+                "yzhang.markdown-all-in-one",
+                "ms-python.vscode-pylance",
+                "ms-python.python",
+                "ms-python.debugpy",
+                "timonwong.shellcheck"
+            ]
+        }
+    },
+    "mounts": [
+        "source=${localWorkspaceFolder}/data/input,target=/kaggle/input,type=bind",
+        "source=${localWorkspaceFolder}/data/results,target=/kaggle/results,type=bind"
+    ],
+    "postCreateCommand": ".devcontainer/setup.sh"
+}
